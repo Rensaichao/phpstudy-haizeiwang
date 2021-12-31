@@ -1,0 +1,68 @@
+@import "../css/reset.css";
+body {
+    height: 100vh;
+    background: url(../images/bj.jpg) no-repeat left top/100% 100%;
+	
+}
+
+.loading {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 150px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.loading h2 {
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.input label {
+    position: absolute;
+    padding-top: 10px;
+    left: 0px;
+    top: 00px;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: all .6s;
+    pointer-events: all;
+}
+
+.input input:focus~label,
+.input input:valid~label {
+    top: -18px;
+    color: turquoise;
+    font-size: 13px;
+}
+
+.loading form button {
+    border-radius: 4px;
+    margin-left: 170px;
+    height: 30px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+}

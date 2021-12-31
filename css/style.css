@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+.main{
+    height: 100%;
+    width: 100%;
+}
+/* 首屏 */
+header {
+    width: 100%;
+    height: 100%;
+    background: url('../img/bg/header-bg.jpg') no-repeat center/cover;
+}
+
+header nav {
+    position: fixed;
+    width: 1200px;
+    background: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+header .logo {
+    font-size: 40px;
+    color: rgb(185, 60, 38);
+    padding: 5px 20px;
+    font-weight: bold;
+    float: left;
+    margin-top: 4px;
+}
+
+header .logo:hover {
+    color: #f7ba3e;
+}
+
+header .nav {
+    float: right;
+    overflow: hidden;
+}
+
+header .nav>li {
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+header .nav>li:hover {
+    background-color: #f7ba3e;
+}
+
+.nav li a {
+    color: white;
+    font-size: 20px;
+}
+
+/* 恶魔果实 */
+
+#fruit {
+    margin: 120px auto;
+}
+
+#fruit h2 {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+#fruit ul {
+    padding: 0 20px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#fruit ul li {
+    flex: 1;
+    padding: 20px;
+}
+
+.fruit-box li h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.fruit-box li h5 {
+    font-size: 16px;
+    color: rgb(110, 108, 108);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.fruit-box img {
+    display: inline-block;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* 强者世界 */
+#hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    text-indent: 5px;
+}
+
+.hero-box {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hero-box figure {
+    float: left;
+    width: 200px;
+    margin: 10px 20px;
+}
+
+.hero-box img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.hero-box figcaption {
+    margin: 10px auto 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333
+}
+
+.hero-box figure p {
+    font-size: 14px;
+    color: #777788;
+    margin-top: 0;
+    font-style: italic;
+}
+
+/* 明暗大战 */
+#fight {
+    margin: 120px 0;
+    overflow: hidden;
+}
+
+#fight h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#fight .container {
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#fight .shaped-left {
+    position: absolute;
+    z-index: 1;
+    background: url("../img/fight/1.jpg") no-repeat top / cover black;
+    width: 100%;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: all .6s linear;
+}
+
+#fight .shaped-right {
+    position: absolute;
+    z-index: 2;
+    background: url("../img/fight/2.jpg") no-repeat top / cover black;
+    width: 70%;
+    height: 80vh;
+    right: 0;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 10% 100%);
+    transition: all .6s linear;
+}
+
+/* 成员时间轴 */
+#teamer {
+    position: relative;
+    margin: 120px auto;
+}
+
+#teamer h2 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.timeline .line {
+    position: absolute;
+    display: block;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    /* 时间线高度 */
+    height: 2400px;
+    background-color: rgb(126, 122, 122);
+    z-index: -1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.timeline img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* 伪元素无法获取到dom */
+/* 
+.timeline>li::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline>li:nth-child(odd)::before {
+    transform: translateX(calc(-50% - 5px)) translateY(5px);
+}
+
+.timeline>li:nth-child(even)::before {
+    transform: translateX(calc(-50% + 5px)) translateY(5px);
+} */
+
+.timeline>li:nth-child(odd) {
+    padding-right: calc(50% - 50px);
+    text-align: right;
+}
+
+.timeline>li:nth-child(odd) img {
+    float: right;
+}
+
+.timeline>li:nth-child(odd) ul {
+    float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.timeline>li:nth-child(even) img {
+    float: left;
+}
+
+.timeline>li:nth-child(even) {
+    padding-left: calc(50% - 50px);
+    text-align: left;
+}
+
+.timeline>li:nth-child(even) ul {
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.teamer-detail .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.teamer-detail .position {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.teamer-detail li:nth-child(3) {
+    text-indent: 20px;
+    width: 400px;
+    padding: 5px 0;
+    color: #777;
+    font-style: italic;
+}
+
+/* 经典战役 */
+#war {
+    margin: 120px 0;
+}
+
+#war>h2 {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.war-box article {
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 50px 10px;
+    position: relative;
+}
+
+.war-box article img {
+    width: 600px;
+    height: 400px;
+}
+
+.war-box article:nth-child(even) img {
+    float: left;
+    padding-right: 30px;
+}
+
+.war-box article:nth-child(odd) img {
+    float: right;
+    padding-left: 30px;
+}
+
+.war-box article h2 {
+    font-size: 30px;
+}
+
+.war-box article p {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px;
+    text-indent: 20px;
+    font-style: italic;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    text-align: center;
+    background: url("../img/bg/footer-bg.jpg") center center no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
+
+footer h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+footer .wrapper {
+    text-align: center;
+}
+
+footer .contact,
+footer .message {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;
+    margin: 0 90px;
+}
+
+footer .contact input,
+footer .message textarea {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer .message textarea {
+    height: 200px;
+    resize: none;
+}
+
+footer .contact input::placeholder,
+footer .message textarea::placeholder {
+    color: #bbb;
+}
+
+footer .button {
+    padding: 20px 80px;
+    margin-top: 30px;
+    background-color: rgb(238, 178, 68);
+    color: #fff;
+    border-color: rgb(238, 178, 68);
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+footer h3 {
+    padding: 20px;
+    color: #fff;
+    letter-spacing: 5px;
+}
